@@ -73,9 +73,9 @@ def set_lmdeploy_backend(device_type: str) -> str:
 def set_default_gpu_memory_utilization() -> float:
     from vllm import __version__ as vllm_version
     if version.parse(vllm_version) >= version.parse("0.11.0"):
-        return 0.7
+        return 0.1
     else:
-        return 0.5
+        return 0.15
 
 
 def set_default_batch_size() -> int:

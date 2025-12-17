@@ -326,7 +326,7 @@ def do_parse(
         end_page_id=None,
         **kwargs,
 ):
-    # 预处理PDF字节数据
+    # 预处理PDF字节数据 过滤开始和终止页
     pdf_bytes_list = _prepare_pdf_bytes(pdf_bytes_list, start_page_id, end_page_id)
 
     if backend == "pipeline":
